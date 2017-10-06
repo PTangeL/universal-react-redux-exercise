@@ -28,9 +28,3 @@ Before you start part 2, please checkout branch part-2-redux
 ## License
 
 This material is available for private, non-commercial use under the [GPL version 3](http://www.gnu.org/licenses/gpl-3.0-standalone.html).
-
-
-
-## License
-
-This material is available for private, non-commercial use under the [GPL version 3](http://www.gnu.org/licenses/gpl-3.0-standalone.html).
