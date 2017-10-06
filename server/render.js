@@ -9,7 +9,7 @@ export default (component, initialState) => `
         <meta name="theme-color" content="#000000">
         <title>React App</title>
         <script>
-               window.__store_initial_state__ = ${JSON.stringify(initialState)}
+          window.__store_initial_state__ = ${JSON.stringify()}
         </script>
       </head>
       <body>

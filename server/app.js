@@ -24,16 +24,15 @@ const reactApp = (req, res) => {
   }
 
   const initialState = res.storeInitialState
-  const store = configureStore(initialState)
+  const store = configureStore()
 
   try {
     HTML = render(
       <Context setStatus={setStatus}>
         <Router context={{}} location={req.url}>
-          <Root store={store}/>
+          <Root />
         </Router>
-      </Context>,
-      initialState
+      </Context>
     )
   } catch (error) {
     HTML = render(<ErrorPage error={error} />)
