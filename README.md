@@ -4,9 +4,9 @@
 
 1. Fix the `start` script in package.json so we can execute `npm start` from the terminal. Hint, which file is the entry point?  
 
-2. Edit server/app.js so the server renders your React App
+2. Edit server/render.js so it uses the renderToString function. Hint, in what part of the HTML should React render your app? Why don't you disable JS on your browser?
 
-3. Edit server/render.js so it uses the renderToString function. Hint, in what part of the HTML should React render your app? Why don't you disable JS on your browser?
+3. Edit server/app.js so the server renders your React App
 
 4. Edit server/render.js so it sends the JavaScript bundle to the client. Hint, Webpack is not creating a file on the disk so don't search for a bundle.js file in your disk. Webpack is generating and serving the file from memory (so it's faster). IMPORTANT, make sure you enable your JS on your browser again if you disabled it in the previous question.
 

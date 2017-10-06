@@ -26,7 +26,7 @@ const reactApp = (req, res) => {
     HTML = render(
       <Context setStatus={setStatus}>
         <Router context={{}} location={req.url}>
-          {/* Hint, what component should we render here? */}
+          <App />
         </Router>
       </Context>
     )
