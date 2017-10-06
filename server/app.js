@@ -23,7 +23,8 @@ const reactApp = (req, res) => {
     status = newStatus
   }
 
-  const store = configureStore(res.storeInitiaState)
+  const initialState = res.storeInitialState
+  const store = configureStore(initialState)
 
   try {
     HTML = render(
@@ -31,7 +32,8 @@ const reactApp = (req, res) => {
         <Router context={{}} location={req.url}>
           <Root store={store}/>
         </Router>
-      </Context>
+      </Context>,
+      initialState
     )
   } catch (error) {
     HTML = render(<ErrorPage error={error} />)

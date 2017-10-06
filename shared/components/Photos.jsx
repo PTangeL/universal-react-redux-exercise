@@ -9,9 +9,9 @@ const Photos = ({ fetchPhotos, photos }) => (
       home
     </Link> -
     <button onClick={fetchPhotos}>Randomize photos</button>
-    <ul>
+    <div>
       { photos.map(photo => <img key={photo.id} src={photo.thumbnailUrl} />) }
-    </ul>
+    </div>
   </div>
 )
 

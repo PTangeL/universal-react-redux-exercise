@@ -7,7 +7,7 @@ export default function (router) {
       /**
        * Initializing the Redux store with photos so they are rendered in the server-side
        */
-      res.storeInitiaState = { photos }
+      res.storeInitialState = { photos }
 
       next()
     })

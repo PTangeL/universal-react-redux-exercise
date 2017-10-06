@@ -2,28 +2,27 @@
 
 ## Exercise part 1, React:
 
-1. Fix the script `start` so we can execute `npm start` from the terminal. Hint, which file is the entry point?  
+1. Fix the `start` script in package.json so we can execute `npm start` from the terminal. Hint, which file is the entry point?  
 
-2. Change server/app.jsx so it renders the React components
+2. Edit server/render.js so it uses the renderToString function. Hint, in what part of the HTML should React render your app? Why don't you disable JS on your browser?
 
-3. Change server/app.jsx so it sends the JavaScript bundle to the client. Hint, Webpack is not creating a file on the disk so don't search for a bundle.js file in your disk. Webpack is generating and serving the file from memory (so it's faster).
+3. Edit server/app.js so the server renders your React App
 
-4. Add a new route called 'photos' that maps the Photos component
+4. Edit server/render.js so it sends the JavaScript bundle to the client. Hint, Webpack is not creating a file on the disk so don't search for a bundle.js file in your disk. Webpack is generating and serving the file from memory (so it's faster). IMPORTANT, make sure you enable your JS on your browser again if you disabled it in the previous question.
 
-5. Implement the fetch function in Photos component
+5. Can you fix this warning: render(): Calling ReactDOM.render() to hydrate server-rendered markup will stop working in React v17. Replace the ReactDOM.render() call with ReactDOM.hydrate() if you want React to attach to the server HTML.
 
-6. Implement the componentDidMount function in Photos component
+6. If you disable JS in your browser, why there are no pictures rendered from the server? Can you fix that so the server renders a list of pictures when JS is disabled on the client?
 
 ## Exercise part 2, Redux:
 
-1. The server side needs a store. Where would you add a `<Provider store={store}>` ? Hint, it should be somewhere in the src/server folder.   
+Before you start part 2, please checkout branch part-2-redux
 
-2. On the client the Redux store needs to be initialized with the same data as the store on the server. Please initialize the store on the client with the same data. Hint, this is specific just to the client, so in which folder should it be?
+1. Can you edit server/app.js so the server side passes a store to the App
 
-3. Create a new page (http://localhost:3456/posts) with a container and a component to display a list of posts, use this data (http://jsonplaceholder.typicode.com/). Data should be rendered on the server-side and client-side as the Photos component does.
+2. How can you send the pictures from the server-side so they are display on the client when JS is disabled on the client? Hint, you need to pass some initial state to the store on the server-side.
 
-4. Include in the new 'Posts' page a section that displays 5 pictures called "popular pictures". Are you fetching all the data (pictures and posts) on the server-side?
-
+3. Can you fix this warning? Warning: Did not expect server HTML to contain a <img> in <div>. Hint, the problem is that the initial state on the server is different than the initial state on the client.
 
 ## License
 
