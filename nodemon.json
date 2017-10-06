@@ -1,0 +1,14 @@
+{
+  "verbose": true,
+  "ext": "*.js*",
+  "ignore": [
+    ".git",
+    "node_modules/**/node_modules",
+    "test",
+    "dist",
+    "log"
+  ],
+  "env": {
+    "NODE_ENV": "local"
+  }
+}
