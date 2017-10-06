@@ -11,7 +11,7 @@ export default (component) => `
       </head>
       <body>
         <div id="root">${ 'hint: what should you add here?' }</div>
-        <script type="application/javascript" src="/bundle.js"></script>
+        <script type="application/javascript" src=""></script>
       </body>
   </html>
 `
