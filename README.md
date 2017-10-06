@@ -12,20 +12,17 @@
 
 5. Can you fix this warning: render(): Calling ReactDOM.render() to hydrate server-rendered markup will stop working in React v17. Replace the ReactDOM.render() call with ReactDOM.hydrate() if you want React to attach to the server HTML.
 
-6. If you disable JS in your browser, why there are no pictures rendered from the server? Can you fix that so the server renders a list of pictures when JS is disabled on the client.
+6. If you disable JS in your browser, why there are no pictures rendered from the server? Can you fix that so the server renders a list of pictures when JS is disabled on the client?
 
 ## Exercise part 2, Redux:
 
 Before you start part 2, please checkout branch part-2-redux
 
-1. The server side needs a store. Where would you add a `<Provider store={store}>` ? Hint, it should be somewhere in the src/server folder.   
+1. Please edit server/app.js so the server side passes a store to the App.
 
-2. On the client the Redux store needs to be initialized with the same data as the store on the server. Please initialize the store on the client with the same data. Hint, this is specific just to the client, so in which folder should it be?
+2. How can you send the pictures from the server-side so they are displayed on the client when JS is disabled on the client? Hint, you need to pass some initial state to the store on the server-side.
 
-3. Create a new page (http://localhost:3456/posts) with a container and a component to display a list of posts, use this data (http://jsonplaceholder.typicode.com/). Data should be rendered on the server-side and client-side as the Photos component does.
-
-4. Include in the new 'Posts' page a section that displays 5 pictures called "popular pictures". Are you fetching all the data (pictures and posts) on the server-side?
-
+3. Can you fix this warning? Warning: Did not expect server HTML to contain a &lt;img&gt; in &lt;div&gt;. Hint, the problem is that the initial state on the server is different than the initial state on the client.
 
 ## License
 
