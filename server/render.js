@@ -10,8 +10,8 @@ export default (component) => `
         <title>React App</title>
       </head>
       <body>
-        <div id="root">${ renderToString(component) }</div>
-        <script type="application/javascript" src="/bundle.js"></script>
+        <div id="root">${ 'hint: what should we render here?' }</div>
+        <script type="application/javascript" src=""></script>
       </body>
   </html>
 `
