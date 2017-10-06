@@ -1,13 +1,14 @@
 import React from 'react'
+import { connect } from 'react-redux'
+
 import Photos from '../components/Photos'
 import * as api from '../api/photos'
+import * as actions from '../actions/photos'
 
 class PhotosContainer extends React.Component {
   constructor(props) {
     super(props)
     this.fetchPhotos = this.fetchPhotos.bind(this)
-
-    this.state = { photos: [] }
   }
 
   componentDidMount() {
@@ -16,16 +17,29 @@ class PhotosContainer extends React.Component {
 
   fetchPhotos() {
     api.fetchRandomPhotos()
-      .then( photos => {
-        this.setState({ photos })
-      })
+      .then(this.props.receivePhotos)
   }
 
   render() {
     return (
-      <Photos fetchPhotos={this.fetchPhotos} photos={this.state.photos} />
+      <Photos fetchPhotos={this.fetchPhotos} photos={this.props.photos} />
     )
   }
 }
 
-export default PhotosContainer
+const mapStateToProps = (state) => ({
+  photos: state.photos
+})
+
+const mapDispatchToProps = {
+  receivePhotos: actions.receivePhotos
+}
+
+PhotosContainer.defaultProps = {
+  photos: []
+}
+
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(PhotosContainer)

@@ -7,7 +7,7 @@ const Photos = ({ fetchPhotos, photos }) => (
     <h2>Photos</h2>
     <Link to="/">
       home
-    </Link> - 
+    </Link> -
     <button onClick={fetchPhotos}>Randomize photos</button>
     <ul>
       { photos.map(photo => <img key={photo.id} src={photo.thumbnailUrl} />) }

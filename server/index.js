@@ -5,6 +5,7 @@ import webpack from 'webpack'
 
 import config from '../webpack.dev.config'
 import reactApp from './app'
+import routes from './routes'
 
 const app = express()
 
@@ -16,6 +17,8 @@ if (process.env.NODE_ENV !== 'production') {
     publicPath: config.output.publicPath,
   }))
 }
+
+app.use(routes())
 
 app.use(reactApp)
 

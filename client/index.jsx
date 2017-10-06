@@ -4,11 +4,14 @@ import {
   BrowserRouter as Router
 } from 'react-router-dom'
 
-import App from '../shared/components/App'
+import configureStore from '../shared/store/configureStore'
+import Root from '../shared/components/Root'
 
-ReactDOM.render(
+const store = configureStore(window.__store_initial_state__)
+
+ReactDOM.hydrate(
   <Router>
-    <App />
+    <Root store={store} />
   </Router>,
   document.getElementById('root')
 )

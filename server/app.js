@@ -3,7 +3,8 @@ import { StaticRouter as Router } from 'react-router'
 import Context from 'react-context-component'
 
 import render from './render'
-import App from '../shared/components/App'
+import Root from '../shared/components/Root'
+import configureStore from '../shared/store/configureStore'
 
 const ErrorPage = ({ error }) => (
   <div>
@@ -22,11 +23,13 @@ const reactApp = (req, res) => {
     status = newStatus
   }
 
+  const store = configureStore(res.storeInitiaState)
+
   try {
     HTML = render(
       <Context setStatus={setStatus}>
         <Router context={{}} location={req.url}>
-          <App />
+          <Root store={store}/>
         </Router>
       </Context>
     )

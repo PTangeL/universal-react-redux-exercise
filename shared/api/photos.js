@@ -1,3 +1,5 @@
+import 'isomorphic-fetch'
+
 export const fetchRandomPhotos = () => (
     fetch('http://jsonplaceholder.typicode.com/photos/')
     .then((response) => {
