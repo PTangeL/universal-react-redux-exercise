@@ -18,11 +18,11 @@
 
 Before you start part 2, please checkout branch part-2-redux
 
-1. Can you edit server/app.js so the server side passes a store to the App
+1. Please edit server/app.js so the server side passes a store to the App.
 
 2. How can you send the pictures from the server-side so they are display on the client when JS is disabled on the client? Hint, you need to pass some initial state to the store on the server-side.
 
-3. Can you fix this warning? Warning: Did not expect server HTML to contain a <img> in <div>. Hint, the problem is that the initial state on the server is different than the initial state on the client.
+3. Can you fix this warning? Warning: Did not expect server HTML to contain a &lt;img&gt; in &lt;div&gt;. Hint, the problem is that the initial state on the server is different than the initial state on the client.
 
 ## License
 
