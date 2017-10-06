@@ -6,7 +6,7 @@ import {
 
 import App from '../shared/components/App'
 
-ReactDOM.render(
+ReactDOM.hydrate(
   <Router>
     <App />
   </Router>,

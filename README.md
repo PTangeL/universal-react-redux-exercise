@@ -2,19 +2,21 @@
 
 ## Exercise part 1, React:
 
-1. Fix the script `start` so we can execute `npm start` from the terminal. Hint, which file is the entry point?  
+1. Fix the `start` script in package.json so we can execute `npm start` from the terminal. Hint, which file is the entry point?  
 
-2. Change server/app.jsx so it renders the React components
+2. Edit server/app.js so the server renders your React App
 
-3. Change server/app.jsx so it sends the JavaScript bundle to the client. Hint, Webpack is not creating a file on the disk so don't search for a bundle.js file in your disk. Webpack is generating and serving the file from memory (so it's faster).
+3. Edit server/render.js so it uses the renderToString function. Hint, in what part of the HTML should React render your app? Why don't you disable JS on your browser?
 
-4. Add a new route called 'photos' that maps the Photos component
+4. Edit server/render.js so it sends the JavaScript bundle to the client. Hint, Webpack is not creating a file on the disk so don't search for a bundle.js file in your disk. Webpack is generating and serving the file from memory (so it's faster). IMPORTANT, make sure you enable your JS on your browser again if you disabled it in the previous question.
 
-5. Implement the fetch function in Photos component
+5. Can you fix this warning: render(): Calling ReactDOM.render() to hydrate server-rendered markup will stop working in React v17. Replace the ReactDOM.render() call with ReactDOM.hydrate() if you want React to attach to the server HTML.
 
-6. Implement the componentDidMount function in Photos component
+6. If you disable JS in your browser, why there are no pictures rendered from the server? Can you fix that so the server renders a list of pictures when JS is disabled on the client.
 
 ## Exercise part 2, Redux:
+
+Before you start part 2, please checkout branch part-2-redux
 
 1. The server side needs a store. Where would you add a `<Provider store={store}>` ? Hint, it should be somewhere in the src/server folder.   
 
